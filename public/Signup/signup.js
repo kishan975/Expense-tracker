@@ -29,7 +29,7 @@ document.getElementById('signup-form').addEventListener('submit', async function
     };
   
    
- await    axios.post('http://localhost:3200/user/signup', data)
+ await    axios.post('/user/signup', data)
       .then(function(response) {
         var name = document.getElementById('name').value = '';
     var email = document.getElementById('email').value = '';
