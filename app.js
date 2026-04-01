@@ -30,6 +30,9 @@ const premiumfeaturesroutes =require('./routes/premiumFeature');
 const forgotpasswordroute = require('./routes/forgotpassword');
 const ForgotPasswordRequests = require('./models/ForgotPassword');
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', (req, res) => {
+  res.redirect('/Login/login.html');
+});
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname,'access.log'),
   {flag:'a'}
